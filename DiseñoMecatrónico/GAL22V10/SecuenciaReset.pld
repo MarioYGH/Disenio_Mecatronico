@@ -1,0 +1,66 @@
+Name     Secuencia  ;
+PartNo   00 ;
+Date     04/11/2024 ;
+Revision 01 ;
+Designer Engineer ;
+Company  University of Tulsa ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
+
+
+/* Entradas */
+PIN 1 = CLK;
+PIN 2 = RESET;
+
+/* Salidas */
+PIN 23 = QD;
+PIN 22 = QC;
+PIN 21 = QB;
+PIN 20 = QA;
+
+/* Definir los estados */
+$DEFINE s0 'b' 0000
+$DEFINE s1 'h' 1
+$DEFINE s2 'd' 2
+$DEFINE s3 3 
+$DEFINE s4 4
+$DEFINE s5 5
+$DEFINE s6 6
+$DEFINE s7 7
+$DEFINE s8 8 
+$DEFINE s9 9 
+
+/* Maquina de estados */
+
+FIELD contador = [QD,QC,QB,QA];
+
+SEQUENCE contador 
+{
+PRESENT s0 
+   NEXT s1;
+PRESENT s1 
+   NEXT s2;
+PRESENT s2 
+   NEXT s3;
+PRESENT s3 
+   NEXT s4;
+PRESENT s4 
+   NEXT s5;
+PRESENT s5 
+   NEXT s6;
+PRESENT s6 
+   NEXT s7;
+PRESENT s7 
+   NEXT s8;
+PRESENT s8 
+   NEXT s9;
+PRESENT s9 
+   NEXT s0;
+}
+
+/* Ecuaciones para establecer un reset asincrono */
+QD.AR = !RESET;
+QC.AR = !RESET;
+QB.AR = !RESET;
+QA.AR = !RESET;
