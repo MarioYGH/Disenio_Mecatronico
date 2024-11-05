@@ -25,7 +25,7 @@ void ultrasonic_test(void *pvParameters)
     // Configurar los pines de los LEDs como salida
     for (int i = 0; i < 10; i++)
     {
-        gpio_pad_select_gpio(LED_PINS[i]);
+        esp_rom_gpio_pad_select_gpio(LED_PINS[i]);
         gpio_set_direction(LED_PINS[i], GPIO_MODE_OUTPUT);
     }
 
