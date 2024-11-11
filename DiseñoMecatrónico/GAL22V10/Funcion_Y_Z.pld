@@ -1,12 +1,12 @@
 Name     Funcion_Y_Z;
-PartNo   00;
-Date     9/11/2024;
-Revision 01;
-Designer Mario G;
-Company  University;
-Assembly None;
-Location None;
-Device   g22v10;
+PartNo   00 ;
+Date     04/11/2024 ;
+Revision 01 ;
+Designer Engineer ;
+Company  University of Tulsa ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
 
 /* Entradas */
 PIN 1 = A;
@@ -14,7 +14,7 @@ PIN 2 = B;
 PIN 3 = C;
 
 /* Salidas */
-PIN 19 = Y;   // Nota: Cambia los números de pin según el manual de tu FPGA
+PIN 19 = Y;   
 PIN 18 = Z;
 
 /* Definición de las funciones lógicas */
