@@ -14,9 +14,9 @@ PIN 2 = B;
 PIN 3 = C;
 
 /* Salidas */
-PIN 19 = Y;   
-PIN 18 = Z;
+PIN 23 = Y;   
+PIN 22 = Z;
 
 /* Definición de las funciones lógicas */
-Y = !((A # C) $ B);   // Implementa NOT((A OR C) XOR B)
-Z = (A & B) # (A # C); // Implementa (A AND B) OR (A OR C)
+Y = !((A # C) $ B);  /* Implementa NOT((A OR C) XOR B) */
+Z = (A & B) # (A # C); /* Implementa (A AND B) OR (A OR C) */
