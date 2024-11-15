@@ -1,0 +1,21 @@
+Name     Copiadora ;
+PartNo   00 ;
+Date     15/11/2024 ;
+Revision 01 ;
+Designer Engineer ;
+Company  University of Tulsa ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
+
+/* *************** INPUT PINS *********************/
+PIN 1 = s1;  
+PIN 2 = s2; 
+PIN 3 = s3;
+PIN 4 = s4;  
+
+/* *************** OUTPUT PINS *********************/
+PIN 23 = Salida;
+
+/* Funcion logica */
+Salida = ( ((!s1)&(!s2)) # ((!s3)&(!s4)) # ((!s1)&(!s3)) # ((!s2)&(!s3)) # ((!s2)&(!s4)) );
