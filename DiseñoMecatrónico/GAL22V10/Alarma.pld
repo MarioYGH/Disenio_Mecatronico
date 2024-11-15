@@ -1,0 +1,21 @@
+Name     Alarma Auto ;
+PartNo   00 ;
+Date     15/11/2024 ;
+Revision 01 ;
+Designer Engineer ;
+Company  University of Tulsa ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
+
+/* *************** INPUT PINS *********************/
+PIN 1 = D; /* Puerta */                              
+PIN 2 = L; /* Faro */                           
+PIN 3 = I; /* Encendido */                           
+
+/* *************** OUTPUT PINS *********************/
+PIN 23 = Alarma; /*                                 
+
+/* Funcion logica */
+Alarma = ((!I) & L) # (I & D); 
+
